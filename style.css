@@ -95,8 +95,14 @@ body{
     border: none;
     border-radius: 30px;
     padding: 10px;
+    border: solid 1px #a13dd6;
 
-    
+}
+.section1--course li:hover{
+    transition: 2s;
+    background-color: transparent;
+    color: #A96648;
+    cursor:pointer;
 }
 .section1--course ul{
     display: flex;
@@ -104,7 +110,7 @@ body{
     padding: 5px;
 
 }
-.navbar__title,.navbar__icon,.section1--course li:hover{
+.navbar__title,.navbar__icon:hover{
     cursor: pointer;
 
 }
@@ -130,7 +136,21 @@ body{
     width: 35%px;
     left: 9%;
     text-align: center;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
     
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .section3--course{
     display:flex;
